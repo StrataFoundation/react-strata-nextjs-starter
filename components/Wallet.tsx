@@ -1,4 +1,3 @@
-import React, { FC, useMemo } from "react";
 import {
   ConnectionProvider,
   WalletProvider,
@@ -13,7 +12,10 @@ import {
   TorusWalletAdapter,
 } from "@solana/wallet-adapter-wallets";
 import { clusterApiUrl } from "@solana/web3.js";
-import { WalletAdapterNetwork } from "@solana/wallet-adapter-base";
+import React, { FC, useMemo } from "react";
+
+export const DEFAULT_ENDPOINT =
+  process.env.NEXT_PUBLIC_SOLANA_URL || "https://api.devnet.solana.com";
 
 // Default styles that can be overridden by your app
 require("@solana/wallet-adapter-react-ui/styles.css");
@@ -35,9 +37,8 @@ export const Wallet: FC = ({ children }) => {
     []
   );
 
-
   return (
-    <ConnectionProvider endpoint={clusterApiUrl(WalletAdapterNetwork.Devnet)}>
+    <ConnectionProvider endpoint={DEFAULT_ENDPOINT}>
       <WalletProvider wallets={wallets} autoConnect>
         {children}
       </WalletProvider>

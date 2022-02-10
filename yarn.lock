@@ -1340,6 +1340,14 @@
     "@solana/web3.js" "^1.20.0"
     eventemitter3 "^4.0.0"
 
+"@solana/wallet-adapter-base@^0.9.3":
+  version "0.9.3"
+  resolved "https://registry.yarnpkg.com/@solana/wallet-adapter-base/-/wallet-adapter-base-0.9.3.tgz#4e109cd698232d17f1ef76ebdbdcd816698e0a9f"
+  integrity sha512-XXUZJWvFouNuuBVnTGZjEhZQFszG60Ss3qDbmV2O4j6S4IwgfabCZ/J+eMG02a86nGEjQrfKz0jmumpmYICZOQ==
+  dependencies:
+    "@solana/web3.js" "^1.20.0"
+    eventemitter3 "^4.0.0"
+
 "@solana/wallet-adapter-bitkeep@^0.3.1":
   version "0.3.2"
   resolved "https://registry.yarnpkg.com/@solana/wallet-adapter-bitkeep/-/wallet-adapter-bitkeep-0.3.2.tgz#8dc8052507298017cec90472490d254151ecb529"
@@ -1429,12 +1437,21 @@
     react "^17.0.0"
     react-dom "^17.0.0"
 
-"@solana/wallet-adapter-react@^0.15.1", "@solana/wallet-adapter-react@^0.15.2":
+"@solana/wallet-adapter-react@^0.15.1":
   version "0.15.2"
   resolved "https://registry.yarnpkg.com/@solana/wallet-adapter-react/-/wallet-adapter-react-0.15.2.tgz#4c526cbcf578f1bac2a78b2ef3d46d16b7dcb7f8"
   integrity sha512-RsTD30uswz4kocQiZYfkcHGkXnjepxup4mQvurWIq5swgZqUbKnvpzMejiWkQNouNLNOZdKcxxtZmiguUlNMuA==
   dependencies:
     "@solana/wallet-adapter-base" "^0.9.1"
+    "@solana/web3.js" "^1.20.0"
+    react "^17.0.0"
+
+"@solana/wallet-adapter-react@^0.15.3":
+  version "0.15.3"
+  resolved "https://registry.yarnpkg.com/@solana/wallet-adapter-react/-/wallet-adapter-react-0.15.3.tgz#f3122a691427769d37d0c291b7f0b0f712aa805c"
+  integrity sha512-Nfd8R2WQ8kf/I4x5MzmEVth4sd5tM2sroOdvk9YzHhCo2nBg2edbQCE9rMHzMBEH6+egTA7dgQrlf0FTMHPUzw==
+  dependencies:
+    "@solana/wallet-adapter-base" "^0.9.3"
     "@solana/web3.js" "^1.20.0"
     react "^17.0.0"
 
@@ -1543,10 +1560,22 @@
     superstruct "^0.14.2"
     tweetnacl "^1.0.0"
 
-"@strata-foundation/react@2.2.1-alpha.3+cde3edd":
-  version "2.2.1-alpha.3"
-  resolved "https://registry.yarnpkg.com/@strata-foundation/react/-/react-2.2.1-alpha.3.tgz#0aefa6a12e95b97c33e88c9c01f8ed8a0a941e67"
-  integrity sha512-9dfTaxS5ttBAyP3eK5ELBP3AoHzOIcOzXkSfEapbdd+2oYZwAc8X83HyLvxQCUNu5RKbHIk0UotAeAIv8/KHOw==
+"@strata-foundation/marketplace-sdk@^3.2.3":
+  version "3.2.3"
+  resolved "https://registry.yarnpkg.com/@strata-foundation/marketplace-sdk/-/marketplace-sdk-3.2.3.tgz#8295263fed1c960d92914934f7d93be4e95d5ba8"
+  integrity sha512-J/y5eJ8tJAuLphSi0fWJfzo2bgF+1X8DT411W+v4fO1C3ZulCtFq7TBMcqQ3rp/Q31yHMMntg5/UZaCKqStWdg==
+  dependencies:
+    "@project-serum/anchor" "^0.20.1"
+    "@solana/web3.js" "^1.32.0"
+    "@strata-foundation/spl-token-bonding" "^3.2.3"
+    "@strata-foundation/spl-utils" "^3.2.3"
+    bn.js "^5.2.0"
+    copyfiles "^2.4.1"
+
+"@strata-foundation/react@3.2.3":
+  version "3.2.3"
+  resolved "https://registry.yarnpkg.com/@strata-foundation/react/-/react-3.2.3.tgz#7ed94013d1beb98d30bf06c650419b72dac95796"
+  integrity sha512-dm+Dlb/xSv+aXg7+K1feJUhneH1fXDxr/YLhYTFO7BBS30ZiwrGH6vB2LIt8LIR7+eStiVfD8HniJTRc8XTlxA==
   dependencies:
     "@chakra-ui/react" "^1.7.2"
     "@emotion/react" "^11.6.0"
@@ -1559,9 +1588,10 @@
     "@solana/wallet-adapter-react" "^0.15.1"
     "@solana/wallet-adapter-wallets" "^0.14.0"
     "@solana/web3.js" "^1.32.0"
-    "@strata-foundation/spl-token-bonding" "^3.0.0"
-    "@strata-foundation/spl-token-collective" "^3.0.0"
-    "@strata-foundation/spl-utils" "^3.0.0"
+    "@strata-foundation/marketplace-sdk" "^3.2.3"
+    "@strata-foundation/spl-token-bonding" "^3.2.3"
+    "@strata-foundation/spl-token-collective" "^3.2.3"
+    "@strata-foundation/spl-utils" "^3.2.3"
     "@toruslabs/solana-embed" "0.0.9"
     axios "^0.25.0"
     buffer "^6.0.3"
@@ -1575,45 +1605,45 @@
     react-icons "^4.3.1"
     yup "^0.32.11"
 
-"@strata-foundation/spl-token-bonding@^3.0.0":
-  version "3.0.0"
-  resolved "https://registry.yarnpkg.com/@strata-foundation/spl-token-bonding/-/spl-token-bonding-3.0.0.tgz#a80f34319513f3d0df39d9ba44fba266c4391ae7"
-  integrity sha512-6EnFGtGvr/260cENuWBG6iXnlUbsTlocUBPQ+ix/MrfOORmJ97f4q2oNb9alVffVBVRY1B+Ny6T9bOIs2X6GQg==
+"@strata-foundation/spl-token-bonding@^3.2.3":
+  version "3.2.3"
+  resolved "https://registry.yarnpkg.com/@strata-foundation/spl-token-bonding/-/spl-token-bonding-3.2.3.tgz#de91b4d3bbe4a3ca170824604773778c82ae333d"
+  integrity sha512-uMyRNyGRDYR6YGkrBWGLoUTkgqiB4Ne+h7a7ZqS9YtFitt1iVYFq0zK+IPSTSBKQpHAjR/A0Fs3f6mXiyg8FyQ==
   dependencies:
     "@project-serum/anchor" "^0.20.1"
     "@solana/web3.js" "^1.32.0"
-    "@strata-foundation/spl-utils" "^3.0.0"
+    "@strata-foundation/spl-utils" "^3.2.3"
     bn.js "^5.2.0"
     copyfiles "^2.4.1"
 
-"@strata-foundation/spl-token-collective@^3.0.0":
-  version "3.0.0"
-  resolved "https://registry.yarnpkg.com/@strata-foundation/spl-token-collective/-/spl-token-collective-3.0.0.tgz#2f7c44d2ca2f4e5084a5a845cbb8da75e67b89e2"
-  integrity sha512-vvZo/5y35pWsVmUYOLHeFHBsUHPMPITN5BIyA246VN1fK/MSTx/3NmGTPSt3GC7aflJhoUvqr9vOOL5AN8yrTQ==
+"@strata-foundation/spl-token-collective@^3.2.3":
+  version "3.2.3"
+  resolved "https://registry.yarnpkg.com/@strata-foundation/spl-token-collective/-/spl-token-collective-3.2.3.tgz#cf686b10d7f81bd7be95a29eee8823791b47a2c1"
+  integrity sha512-xHIR2ZFIt6VPatBz4gki45a35CS/dj37mmo9VNNHKri6dyJckKlTZaN4d2d1ceOUFvN9UXDiHt+iB5zPyC78nA==
   dependencies:
     "@bonfida/spl-name-service" "^0.1.22"
     "@project-serum/anchor" "^0.20.1"
     "@solana/web3.js" "^1.32.0"
-    "@strata-foundation/spl-token-bonding" "^3.0.0"
-    "@strata-foundation/spl-token-staking" "^3.0.0"
-    "@strata-foundation/spl-utils" "^3.0.0"
+    "@strata-foundation/spl-token-bonding" "^3.2.3"
+    "@strata-foundation/spl-token-staking" "^3.2.3"
+    "@strata-foundation/spl-utils" "^3.2.3"
     bn.js "^5.2.0"
     copyfiles "^2.4.1"
 
-"@strata-foundation/spl-token-staking@^3.0.0":
-  version "3.0.0"
-  resolved "https://registry.yarnpkg.com/@strata-foundation/spl-token-staking/-/spl-token-staking-3.0.0.tgz#90f85c97cc7f043d079ec946bc747f00874330bd"
-  integrity sha512-d+GTpOim1dNpuGH0cgy6PIJ9BiUTUtq61stnb0UxPrSHJ5RpvLtp4OK+4gWJEKHs6rqRDuJenvoqiZOeBDTzEQ==
+"@strata-foundation/spl-token-staking@^3.2.3":
+  version "3.2.3"
+  resolved "https://registry.yarnpkg.com/@strata-foundation/spl-token-staking/-/spl-token-staking-3.2.3.tgz#b75a910c945389966556789337cc7dc22e5b580a"
+  integrity sha512-mpO13/Rkg85aNRtmY5ilxB6L3z7epnM2R9rZKc3DaAnnJT5GQkSyY7V4VUKC8XvPwdqEP0KjGc+ugsaxBPYFEA==
   dependencies:
     "@solana/web3.js" "^1.32.0"
-    "@strata-foundation/spl-utils" "^3.0.0"
+    "@strata-foundation/spl-utils" "^3.2.3"
     bn.js "^5.2.0"
     semver "^7.3.5"
 
-"@strata-foundation/spl-utils@^3.0.0":
-  version "3.0.0"
-  resolved "https://registry.yarnpkg.com/@strata-foundation/spl-utils/-/spl-utils-3.0.0.tgz#fd1c3eb219c6e05c391b90058ddcdd8b431e2d71"
-  integrity sha512-QnTqFKrbauMjSYPuOL7FtE2mltBQiKz7SgtEuFYWez6nEWotaZAa5B8KGn+8dmINmVvqTZCcrdBalsHKRN3LTQ==
+"@strata-foundation/spl-utils@^3.2.3":
+  version "3.2.3"
+  resolved "https://registry.yarnpkg.com/@strata-foundation/spl-utils/-/spl-utils-3.2.3.tgz#76a554d103f96668b23b60a0afb2e0778bce2683"
+  integrity sha512-ByIz0Uu+rJmd7E2dmtRdPlhYY34wIRQmq3RdNdAH98iwJ98nH8MXo2KVFTLcWxMYTkmlCyhiikrHiMe0YHFu4A==
   dependencies:
     "@metaplex-foundation/mpl-token-metadata" "^1.1.0"
     "@metaplex/arweave-cost" "1.0.4"
@@ -1621,6 +1651,7 @@
     "@solana/spl-name-service" "^0.1.3"
     "@solana/web3.js" "^1.32.0"
     bs58 "^4.0.1"
+    localstorage-memory "^1.0.3"
     superstruct "0.14.2"
     tweetnacl "^1.0.3"
 
@@ -4978,6 +5009,11 @@ loader-utils@1.2.3:
     big.js "^5.2.2"
     emojis-list "^2.0.0"
     json5 "^1.0.1"
+
+localstorage-memory@^1.0.3:
+  version "1.0.3"
+  resolved "https://registry.yarnpkg.com/localstorage-memory/-/localstorage-memory-1.0.3.tgz#566b37968fe0c4d76ba36a6da564fa613945ca72"
+  integrity sha512-t9P8WB6DcVttbw/W4PIE8HOqum8Qlvx5SjR6oInwR9Uia0EEmyUeBh7S+weKByW+l/f45Bj4L/dgZikGFDM6ng==
 
 locate-path@^2.0.0:
   version "2.0.0"
