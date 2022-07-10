@@ -30,6 +30,7 @@ const Home: NextPage = ({ foo }: InferGetServerSidePropsType<typeof getServerSid
       </Head>
 
       <main className={styles.main}>
+          <video height="200" width="450" src="/trailer.mov" autoPlay />
           <CandyMachine />
           <TokenDisplay  {...tokenState} />
           <div style={{ width: "400px" }}>

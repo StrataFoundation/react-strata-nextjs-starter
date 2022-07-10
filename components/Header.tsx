@@ -1,5 +1,5 @@
 import React from "react";
-import { Box, Center, Flex, HStack, Icon, Text, Link, LinkProps } from "@chakra-ui/react";
+import { Box, Center, Flex, HStack, Icon, Text, Link, LinkProps, Image } from "@chakra-ui/react";
 import { WalletDisconnectButton, WalletModalProvider, WalletMultiButton } from '@solana/wallet-adapter-react-ui';
 
 interface IMenuItemProps extends LinkProps {
@@ -34,7 +34,9 @@ export const Header: React.FC = () => (
     bg="grey"
   >
     <HStack spacing={4}>
-      <Text fontSize="xl">Test</Text>
+      <Link href="https://imsonft.io">
+          <Image src="https://imsonft.io/wp-content/uploads/2022/05/IMSOnft_logo_header.png" width="100" height="75" alt="Intergalactic Monkey Space Odyssey" id="logo" data-height-percentage="48" data-actual-width="420" data-actual-height="125"/>
+      </Link>
     </HStack>
     <Box display={{ md: "block" }} flexBasis={{ base: "100%", md: "auto" }}>
       <HStack
@@ -44,7 +46,7 @@ export const Header: React.FC = () => (
         pt={[4, 4, 0, 0]}
       >
         <WalletMultiButton />
-        <WalletDisconnectButton />
+{/*        <WalletDisconnectButton /> */}
       </HStack>
     </Box>
   </Center>
