@@ -7,6 +7,7 @@ import React from 'react';
 import { Toaster } from 'react-hot-toast';
 import { CreateButton, ITokenState } from '../components/CreateButton';
 import { TokenDisplay } from '../components/TokenDisplay';
+import { CandyMachine } from '../components/CandyMachine';
 import styles from '../styles/Home.module.css';
 
 export const getServerSideProps: GetServerSideProps = async (context) => {
@@ -29,14 +30,13 @@ const Home: NextPage = ({ foo }: InferGetServerSidePropsType<typeof getServerSid
       </Head>
 
       <main className={styles.main}>
-        
-          <CreateButton setTokenState={setTokenState} />
+          <CandyMachine />
           <TokenDisplay  {...tokenState} />
           <div style={{ width: "400px" }}>
             {tokenState.tokenBonding && <Swap tokenBondingKey={tokenState.tokenBonding} />}
           </div>
           <Toaster
-            position="bottom-center"
+            position="bottom-left"
             containerStyle={{
               margin: "auto",
               width: "420px",

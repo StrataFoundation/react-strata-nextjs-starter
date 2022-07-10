@@ -3,7 +3,6 @@ import { useStrataSdks } from "@strata-foundation/react";
 import { SplTokenCollective } from "@strata-foundation/spl-token-collective";
 import { PublicKey } from "@solana/web3.js";
 import { Button } from "@chakra-ui/react";
-
 export interface ITokenState {
   tokenRef?: PublicKey;
   tokenBonding?: PublicKey;
