@@ -1,6 +1,10 @@
 import { CSSReset } from "@chakra-ui/css-reset";
-import { WalletModalProvider } from "@solana/wallet-adapter-react-ui";
-import { AccountProvider, ErrorHandlerProvider, Notification, StrataSdksProvider, ThemeProvider } from "@strata-foundation/react";
+import {
+  ErrorHandlerProvider,
+  Notification,
+  StrataProviders,
+  ThemeProvider,
+} from "@strata-foundation/react";
 import React from "react";
 import toast from "react-hot-toast";
 import { Wallet } from "./Wallet";
@@ -44,13 +48,9 @@ export const Providers: React.FC = ({ children }) => {
       <CSSReset />
       <ErrorHandlerProvider onError={onError}>
         <Wallet>
-          <WalletModalProvider>
-            <StrataSdksProvider>
-              <AccountProvider commitment="confirmed">
-                {children}
-              </AccountProvider>
-            </StrataSdksProvider>
-          </WalletModalProvider>
+          <StrataProviders>
+            {children}
+          </StrataProviders>
         </Wallet>
       </ErrorHandlerProvider>
     </ThemeProvider>
